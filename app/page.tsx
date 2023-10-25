@@ -1,36 +1,23 @@
 'use client';
 import GraphElement from './components/ui/icons/graphs/GraphElement';
-import RedSmiley from './components/ui/icons/emojis/RedSmiley';
-import OrangeSmiley from './components/ui/icons/emojis/OrangeSmiley';
-import GreenSmiley from './components/ui/icons/emojis/GreenSmiley';
-import ActiveStep from './components/ui/icons/steps/ActiveStep';
-import CompletedStep from './components/ui/icons/steps/CompletedStep';
-import FutureStep from './components/ui/icons/steps/FutureStep';
-import PrimaryButton from './components/ui/buttons/PrimaryButton';
-import CameraButton from './components/ui/buttons/CameraButton';
-import ImageButton from './components/ui/buttons/ImagesButton';
-import ElementsContainer from './components/ui/containers/ElementsContainer';
-import TabButton from './components/ui/buttons/TabButton';
-import FlexRowContainer from './components/ui/containers/FlexRowContainer';
-import FlexColContainer from './components/ui/containers/FlexColContainer';
-import UniversalForm from './components/ui/forms/UniversalForm';
-import ZoneButtonsGroup from './components/ui/buttons/ZoneButtonsGroup';
 
 const Home = () => {
   return (
     <main className='grid grid-flow-row p-6'>
       <div className='flex flex-wrap items-center content-center gap-6 pt-20'>
-        <GraphElement
-          src='/images/außenluftansaugung.png'
-          alt='Außenluftansaugung'
-          isIncluded={true}
-        />
-        <GraphElement src='/images/außenluftkanal.png' alt='Außenluftkanal' isIncluded={true} />
-        <GraphElement src='/images/schalldämpfer.png' alt='Schalldämpfer' isIncluded={true} />
-        <GraphElement src='/images/zuluftkanalint.png' alt='Zuluftkanalint' isIncluded={true} />
-        <GraphElement src='/images/luftauslass.png' alt='Luftauslass' isIncluded={true} />
-        <GraphElement src='/images/umluftansaugung.png' alt='Umluftansaugung' isIncluded={true} />
+        <GraphElement src='/images/abluftanglage.png' alt='Abluftanglage' isIncluded={true} />
+        <GraphElement src='/images/splitgerät.png' alt='Splitgerät' isIncluded={true} />
+        <GraphElement src='/images/ventilator.png' alt='Ventilator' isIncluded={true} />
+        <GraphElement src='/images/füllkörper.png' alt='Füllkörper' isIncluded={true} />
+        <GraphElement src='/images/befeuchter.png' alt='Befeuchter' isIncluded={true} />
+        <GraphElement src='/images/dampfbefeuch.png' alt='Dampfbefeuch' isIncluded={true} />
+        <GraphElement src='/images/berieselungd.png' alt='Berieselungd' isIncluded={true} />
+        <GraphElement src='/images/jalousieklappe.png' alt='Jalousieklappe' isIncluded={true} />
         <GraphElement src='/images/mischluftklappe.png' alt='Mischluftklappe' isIncluded={true} />
+        <GraphElement src='/images/außenluftkanal.png' alt='Außenluftkanal' isIncluded={true} />
+        <GraphElement src='/images/zuluftkanalint.png' alt='Zuluftkanalint' isIncluded={true} />
+        <GraphElement src='/images/schalldämpfer.png' alt='Schalldämpfer' isIncluded={true} />
+        <GraphElement src='/images/luftauslass.png' alt='Luftauslass' isIncluded={true} />
         <GraphElement src='/images/kreislaufverbu.png' alt='Kreislaufverbu...' isIncluded={true} />
         <GraphElement src='/images/rotationswarm.png' alt='Rotationswärm...' isIncluded={true} />
         <GraphElement src='/images/kreuzwarmeta.png' alt='Kreuzwärmeta...' isIncluded={true} />
@@ -44,10 +31,29 @@ const Home = () => {
         <GraphElement src='/images/filterM5.png' alt='FilterM5' isIncluded={true} />
         <GraphElement src='/images/filterF7.png' alt='FilterF7' isIncluded={true} />
         <GraphElement src='/images/filterF9.png' alt='FilterF9' isIncluded={true} />
-        <GraphElement src='/images/jalousieklappe.png' alt='Jalousieklappe' isIncluded={true} />
         <GraphElement src='/images/kühler.png' alt='Kühler' isIncluded={true} />
         <GraphElement src='/images/tropfenabsche.png' alt='Tropfenabsche' isIncluded={true} />
-        <GraphElement src='/images/uv-lampe.png' alt='uv-lampe' isIncluded={true} />
+        <GraphElement src='/images/uv-lampe.png' alt='UV-lampe' isIncluded={true} />
+        <GraphElement src='/images/abluftgitterdig.png' alt='Abluftgitterdig' isIncluded={true} />
+        <GraphElement src='/images/abluftkanaldig.png' alt='Abluftkanaldig' isIncluded={true} />
+        <GraphElement src='/images/becken.png' alt='Becken' isIncluded={true} />
+        <GraphElement src='/images/behandlungzso.png' alt='Behandlungzso' isIncluded={true} />
+        <GraphElement src='/images/dummyelement.png' alt='Dummyelement' isIncluded={true} />
+        <GraphElement src='/images/entfeuchter.png' alt='Entfeuchter' isIncluded={true} />
+        <GraphElement src='/images/filterdigestori.png' alt='Filterdigestori' isIncluded={true} />
+        <GraphElement
+          src='/images/außenluftansaugung.png'
+          alt='Außenluftansaugung'
+          isIncluded={true}
+        />
+        <GraphElement
+          src='/images/gefahrstoffschran.png'
+          alt='Gefahrstoffschran'
+          isIncluded={true}
+        />
+        <GraphElement src='/images/umluftansaugung.png' alt='Umluftansaugung' isIncluded={true} />
+        <GraphElement src='/images/abstellplatz.png' alt='Abstellplatz' isIncluded={true} />
+        <GraphElement src='/images/umluftkuhlgerat.png' alt='Umluftkuhlgerat' isIncluded={true} />
       </div>
     </main>
   );
