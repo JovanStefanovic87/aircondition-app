@@ -11,9 +11,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ktOrange: '#FC9815',
+        blueLight: '#2dabde',
+        blueDark: '#1D8DBB',
+        greenLight: '#a3d071',
+        grayLight: 'gray-200',
         ktBlueGray: '#7B8D8E',
-        headerBg: '#1A73E8',
         ktCyan: '#0D3B4E',
         ktBg: '#303030',
         ktAppointmentBg: '#555555',
@@ -51,6 +53,7 @@ module.exports = {
         workingHoursSlotLg: '49%',
       },
       minWidth: {
+        column: 400,
         label: 140,
         slotsWidth: 200,
         form: '95dvw',
@@ -64,7 +67,19 @@ module.exports = {
       zIndex: {
         3: 3,
       },
+      borderWidth: {
+        DEFAULT: '1px',
+        '0': '0',
+        '2': '2px',
+        '4': '4px',
+      },
+      gap: {
+        '1px': 1,
+      }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+  ],
 };

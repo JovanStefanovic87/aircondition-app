@@ -1,94 +1,54 @@
 'use client';
-
-import type { RootState } from './globalRedux/store';
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import {
-  increment,
-  decrement,
-  incrementByAmount,
-} from './globalRedux/features/counter/counterSlice';
-import { toJovan, toAdri, toAlen } from './globalRedux/features/name/nameSlice';
-import { setFirstName, setLastName } from './globalRedux/features/form/formSlice';
+import GraphElement from './components/ui/icons/graphs/GraphElement';
+import RedSmiley from './components/ui/icons/emojis/RedSmiley';
+import OrangeSmiley from './components/ui/icons/emojis/OrangeSmiley';
+import GreenSmiley from './components/ui/icons/emojis/GreenSmiley';
+import ActiveStep from './components/ui/icons/steps/ActiveStep';
+import CompletedStep from './components/ui/icons/steps/CompletedStep';
+import FutureStep from './components/ui/icons/steps/FutureStep';
+import PrimaryButton from './components/ui/buttons/PrimaryButton';
+import CameraButton from './components/ui/buttons/CameraButton';
+import ImageButton from './components/ui/buttons/ImagesButton';
+import ElementsContainer from './components/ui/containers/ElementsContainer';
+import TabButton from './components/ui/buttons/TabButton';
+import FlexRowContainer from './components/ui/containers/FlexRowContainer';
+import FlexColContainer from './components/ui/containers/FlexColContainer';
+import UniversalForm from './components/ui/forms/UniversalForm';
+import ZoneButtonsGroup from './components/ui/buttons/ZoneButtonsGroup';
 
 const Home = () => {
-  const count = useSelector((state: RootState) => state.counter.value);
-  const name = useSelector((state: RootState) => state.name.value);
-  const firstName = useSelector((state: RootState) => state.form.firstName);
-  const lastName = useSelector((state: RootState) => state.form.lastName);
-  const dispatch = useDispatch();
-
-  const handleFirstNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    dispatch(setFirstName(e.target.value));
-  };
-
-  const handleLastNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    dispatch(setLastName(e.target.value));
-  };
-
   return (
-    <main className='grid grid-flow-row p-10'>
-      <span className='mb-1 pr-4 font-bold text-gray-500 md:mb-0 md:text-right'>{count}</span>
-      <button
-        className='bg-orange-primary rounded px-4 py-2 font-bold text-white hover:bg-blue-700'
-        onClick={() => dispatch(increment())}
-      >
-        Increment
-      </button>
-      <button
-        className='rounded bg-red-500 px-4 py-2 font-bold text-white hover:bg-blue-700'
-        onClick={() => dispatch(decrement())}
-      >
-        Decrement
-      </button>
-      <button
-        className='rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700'
-        onClick={() => dispatch(incrementByAmount(2))}
-      >
-        Increment by 2
-      </button>
-      <div>
-        <button
-          className='rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700'
-          onClick={() => dispatch(toAlen())}
-        >
-          Alen
-        </button>
-        <button
-          className='rounded bg-red-500 px-4 py-2 font-bold text-white hover:bg-blue-700'
-          onClick={() => dispatch(toAdri())}
-        >
-          Adri
-        </button>
-        <button
-          className='rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700'
-          onClick={() => dispatch(toJovan())}
-        >
-          Jovan
-        </button>
-        <span className='mb-1 pr-4 font-bold text-gray-500 md:mb-0 md:text-right'>{name}</span>
+    <main className='grid grid-flow-row p-6'>
+      <div className='flex flex-wrap items-center content-center gap-6 pt-20'>
+        <GraphElement
+          src='/images/außenluftansaugung.png'
+          alt='Außenluftansaugung'
+          isIncluded={true}
+        />
+        <GraphElement src='/images/außenluftkanal.png' alt='Außenluftkanal' isIncluded={true} />
+        <GraphElement src='/images/schalldämpfer.png' alt='Schalldämpfer' isIncluded={true} />
+        <GraphElement src='/images/zuluftkanalint.png' alt='Zuluftkanalint' isIncluded={true} />
+        <GraphElement src='/images/luftauslass.png' alt='Luftauslass' isIncluded={true} />
+        <GraphElement src='/images/umluftansaugung.png' alt='Umluftansaugung' isIncluded={true} />
+        <GraphElement src='/images/mischluftklappe.png' alt='Mischluftklappe' isIncluded={true} />
+        <GraphElement src='/images/kreislaufverbu.png' alt='Kreislaufverbu...' isIncluded={true} />
+        <GraphElement src='/images/rotationswarm.png' alt='Rotationswärm...' isIncluded={true} />
+        <GraphElement src='/images/kreuzwarmeta.png' alt='Kreuzwärmeta...' isIncluded={true} />
+        <GraphElement src='/images/erhitzer.png' alt='Erhitzer' isIncluded={true} />
+        <GraphElement src='/images/filtercoarse.png' alt='Filtercoarse' isIncluded={true} />
+        <GraphElement src='/images/filterePM1-50.png' alt='FilterePM1-50' isIncluded={true} />
+        <GraphElement src='/images/filterePM1-80.png' alt='FilterePM1-80' isIncluded={true} />
+        <GraphElement src='/images/filterePM2,5-50.png' alt='FilterePM2,5-50' isIncluded={true} />
+        <GraphElement src='/images/filterePM10-50.png' alt='FilterePM10-50' isIncluded={true} />
+        <GraphElement src='/images/filterH13.png' alt='FilterH13' isIncluded={true} />
+        <GraphElement src='/images/filterM5.png' alt='FilterM5' isIncluded={true} />
+        <GraphElement src='/images/filterF7.png' alt='FilterF7' isIncluded={true} />
+        <GraphElement src='/images/filterF9.png' alt='FilterF9' isIncluded={true} />
+        <GraphElement src='/images/jalousieklappe.png' alt='Jalousieklappe' isIncluded={true} />
+        <GraphElement src='/images/kühler.png' alt='Kühler' isIncluded={true} />
+        <GraphElement src='/images/tropfenabsche.png' alt='Tropfenabsche' isIncluded={true} />
+        <GraphElement src='/images/uv-lampe.png' alt='uv-lampe' isIncluded={true} />
       </div>
-      <form className='flex flex-col'>
-        <label htmlFor='first'>First name:</label>
-        <input
-          type='text'
-          className='text-black'
-          id='first'
-          name='first'
-          value={firstName}
-          onChange={handleFirstNameChange}
-        />
-        <label htmlFor='last'>Last name:</label>
-        <input
-          type='text'
-          className='text-black'
-          id='last'
-          name='last'
-          value={lastName}
-          onChange={handleLastNameChange}
-        />
-        <button type='submit'>Submit</button>
-      </form>
     </main>
   );
 };

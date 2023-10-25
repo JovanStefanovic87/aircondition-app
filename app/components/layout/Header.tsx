@@ -11,7 +11,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className='bg-headerBg px-4 py-4'>
+    <header className='bg-blueLight px-4 py-4 top-0 left-0 w-full fixed'>
       <div className='flex justify-between items-center'>
         <div className='text-white space-x-4'>
           <div className='flex gap-6'>
@@ -19,16 +19,16 @@ const Header: React.FC = () => {
             <Link href='/' className={isActive('/')}>
               NEUE INSPECTION
             </Link>
-            <Link href='/kalendar' className={isActive('/kalendar')}>
+            <Link href='/inprogress' className={isActive('/inprogress')}>
               LAUFENDE INSPEKTIONEN
             </Link>
-            <Link href='/klijenti' className={isActive('/klijenti')}>
+            <Link href='/completed' className={isActive('/completed')}>
               ABGESCHLOSSENE INSPEKTIONEN
             </Link>
           </div>
         </div>
         <div className='flex gap-6'>
-          <Link href='/timovi' className={isActive('/timovi')}>
+          <Link href='/profile' className={isActive('/profile')}>
             LUKA POLJAKOVIC
           </Link>
           <div className='flex items-center gap-1'>
