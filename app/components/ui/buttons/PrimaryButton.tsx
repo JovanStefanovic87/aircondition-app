@@ -1,4 +1,8 @@
-import { PrimaryButtonProps } from '@/app/helpers/interfaces';
+interface PrimaryButtonProps {
+  onClick: (event: React.FormEvent) => void;
+  value?: string;
+  isDisabled?: boolean;
+}
 
 const PrimaryButton: React.FC<PrimaryButtonProps> = ({
   onClick,

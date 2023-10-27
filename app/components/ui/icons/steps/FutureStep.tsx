@@ -1,6 +1,12 @@
-import { StepTitleType } from '@/app/helpers/interfaces';
 import StepTitleInactive from '../../text/StepTitleInactive';
 import DangerIcon from '../svg/DangerIcon';
+
+interface StepTitleType {
+  /** Step number */
+  index: number;
+  /** Step name */
+  process: string;
+}
 
 const FutureStep: React.FC<StepTitleType> = ({ index, process }) => {
   return (

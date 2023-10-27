@@ -1,5 +1,16 @@
-import React from 'react';
-import { InputWithLabelProps } from '@/app/helpers/interfaces';
+import { ChangeEvent } from 'react';
+
+export interface InputWithLabelProps {
+  id: string;
+  name: string;
+  value: string | number;
+  placeholder?: string;
+  label: string;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  error: string | null;
+  touched: boolean;
+  submitted: boolean;
+}
 
 const InputWithLabel: React.FC<InputWithLabelProps> = ({
   id,

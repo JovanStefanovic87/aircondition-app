@@ -1,6 +1,12 @@
-import { StepTitleType } from '@/app/helpers/interfaces';
 import StepTitleInactive from '../../text/StepTitleInactive';
 import CheckedIcon from '../svg/Checked';
+
+interface StepTitleType {
+  /** Step number */
+  index: number;
+  /** Step name */
+  process: string;
+}
 
 const CompletedStep: React.FC<StepTitleType> = ({ index, process }) => {
   return (

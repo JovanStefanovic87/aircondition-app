@@ -1,6 +1,12 @@
-import { StepTitleType } from '@/app/helpers/interfaces';
 import StepTitle from '../../text/StepTitleActive';
 import DangerIcon from '../svg/DangerIcon';
+
+interface StepTitleType {
+  /** Step number */
+  index: number;
+  /** Step name */
+  process: string;
+}
 
 const ActiveStep: React.FC<StepTitleType> = ({ index, process }) => {
   return (

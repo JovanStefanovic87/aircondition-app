@@ -1,4 +1,9 @@
-import { StepTitleType } from '@/app/helpers/interfaces';
+interface StepTitleType {
+  /** Step number */
+  index: number;
+  /** Step name */
+  process: string;
+}
 
 const StepTitleInactive: React.FC<StepTitleType> = ({ index, process }) => {
   return (

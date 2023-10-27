@@ -1,4 +1,8 @@
-import { ChildrenProps } from '@/app/helpers/interfaces';
+import React, { ReactNode } from 'react';
+
+type ChildrenProps = {
+  children: ReactNode;
+};
 
 const GraphElementWrapper: React.FC<ChildrenProps> = ({ children }) => {
   return (

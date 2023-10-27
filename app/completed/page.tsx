@@ -15,7 +15,6 @@ const CompletedPage = () => {
   ];
 
   const handleSubmit = (formData: any) => {
-    // Handle form submission with formData
     console.log('Form submitted with data:', formData);
   };
 

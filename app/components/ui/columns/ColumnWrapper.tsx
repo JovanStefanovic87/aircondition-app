@@ -1,5 +1,11 @@
-import { ColumnWrapperType } from '@/app/helpers/interfaces';
 import ColumnHead from './ColumnHead';
+
+interface ColumnWrapperType {
+  title: string;
+  /** Is step verified */
+  children: React.ReactNode;
+  isComplited?: boolean;
+}
 
 const ColumnWrapper: React.FC<ColumnWrapperType> = ({ title, children, isComplited = false }) => {
   return (
